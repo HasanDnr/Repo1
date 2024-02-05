@@ -3,7 +3,7 @@
 # As we know, we are gonna import necessary libraries. We've also imported
 from flask import Flask, request, render_template
 from flaskext.mysql import MySQL
-# Create an object named app
+
 app = Flask(__name__)
 # The hardest part of this project is to get endpoint of RDS instances. Since our RDS is created within cloudformation template, we need to get RDS endpoint and paste it here as environmental variable using Launch templates user data.
 db_endpoint = open("/home/ec2-user/phonebook/dbserver.endpoint", 'r', encoding='UTF-8')
